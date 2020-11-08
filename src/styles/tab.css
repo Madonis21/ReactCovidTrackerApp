@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 20px
+}
+.tab-item {    
+    opacity: 0.8;
+    margin-left: 1rem;
+    cursor: pointer;
+    background: grey;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 70px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 15px;
+    transition-duration: 0.4s;
+
+}
+.tab-item.selected {
+    opacity: 1;
+    background-color: green;
+    color: white;
+    box-shadow: 1px 3px 0px 0px;
+}

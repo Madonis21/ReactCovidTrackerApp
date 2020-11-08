@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TabControl from '../src/shared/Tab/Tab';
+import { TABCONSTANTS, HEADERCONST } from '../src/constants/TabConstants';
+import LandingArea from '../src/components/LandingArea/LandingArea';
 
 function App() {
+
+  let [selectedTab, changeSelectedTab] = useState(HEADERCONST.WORLD_VIEW);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TabControl tabs={TABCONSTANTS} selectedTab={selectedTab} changeTab={(val: string) => changeSelectedTab(val)}></TabControl>
+      <LandingArea selectedTab={selectedTab}></LandingArea>
     </div>
   );
 }

@@ -1,0 +1,59 @@
+.table-layout {
+    width: 80%;
+    margin-left: 10%;
+    border: 2px solid;
+    border-collapse: collapse;
+}
+.table-layout th {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    height: 38px;
+    user-select: none;
+    cursor: pointer;
+}
+.table-layout th::after {
+    content: '   \21C5';
+}
+.loading-placeholder th::after {
+    content: none;
+}
+
+.table-layout tr:nth-of-type(odd){
+    background-color: white;
+
+}
+.table-layout tr:nth-of-type(even){
+    background-color: grey;
+}
+.table-layout td {
+    padding: 8px;
+    height: 38px;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: linear-gradient(to right, grey 8%, lightgrey 18%, grey 33%);
+    background-size: 800px 104px;
+    height: 96px;
+    position: relative;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    width: calc(100% - 200px);
+    height: 40px;
+    border: 1px solid lightgrey;
+}
+
