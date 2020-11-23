@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import TabControl from '../src/shared/Tab/Tab';
 import { TABCONSTANTS, HEADERCONST } from '../src/constants/TabConstants';
 import LandingArea from '../src/components/LandingArea/LandingArea';

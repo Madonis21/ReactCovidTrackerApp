@@ -8,6 +8,7 @@ A React-redux app to track global covid numbers on daily basis.
 * Typescript
 * highcharts @8.2.2
 * highcharts-react-official @3.0.0
+* Performance Monitoring via Log Rocket
 * More dependencies can be found in package.json file
 ### Installing
 * Run the following command to install various dependencies

@@ -8,7 +8,9 @@ import { applyMiddleware, createStore } from "redux";
 import { masterReducer } from "./reducers/mainReducer";
 import { interceptor } from '../src/service/httpService';
 import thunk from 'redux-thunk';
+import LogRocket from 'logrocket';
 
+LogRocket.init('6egqfk/elcodigo');
 const store = createStore(masterReducer, applyMiddleware(thunk));
 interceptor(store);
 
